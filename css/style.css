@@ -1,0 +1,252 @@
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Toggle-Menu 
+==============
+*/
+header {
+  padding: 30px 0 36px;
+  border-bottom: 1px solid #ccc;
+}
+
+header .menu-list {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+header nav ul li a {
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  header .menu-list {
+    display: block;
+  }
+
+  header nav {
+    background-color: #2c3e50;
+    height: 100vh;
+    position: fixed;
+    width: 300px;
+    top: 0;
+    right: -300px;
+    padding-top: 50px;
+  }
+
+  header nav ul li {
+    padding: 20px;
+  }
+
+  header nav ul li a {
+    color: #fff;
+  }
+
+  header .menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    transition: all 0.2s;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  header .menu-btn span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #808080;
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+
+  header .menu-btn span:nth-child(1) {
+    top: 0;
+  }
+
+  header .menu-btn span:nth-child(2) {
+    top: 10px;
+  }
+
+  header .menu-btn span:nth-child(3) {
+    top: 20px;
+  }
+
+  header .menu-btn.active {
+    transform: rotate(180deg);
+  }
+
+  header .menu-btn.active span {
+    background: #fff;
+  }
+
+  header .menu-btn.active span:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+
+  header .menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  header .menu-btn.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+  }
+}
+
+/* Heightline
+==============
+*/
+
+.sec-height-line h3 {
+  font-size: 20px;
+  text-align: start;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card div {
+  background-color: #2c3e50;
+  width: 24%;
+  margin: 1%;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: #fff;
+}
+
+.changeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.changeBtn button {
+  background-color: #2c3e50;
+  width: 120px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Tab
+===========
+*/
+
+.sec-tab {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.tabs {
+  background-color: #2c3e50;
+  padding: 20px;
+}
+
+.tabs li {
+  float: left;
+  margin-right: 20px;
+  color: #fff;
+  cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: 1px solid transparent;
+}
+
+.tabs li.activeTab,
+.tabs li:hover {
+  border-bottom: 1px solid #d1b203;
+  transition: 0.6s ease;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content h2 {
+  text-align: start;
+  padding: 10px 0px;
+}
+
+.tab-content.activeTab {
+  display: inherit;
+}
+
+/* Accordion
+==============
+*/
+
+.accordion-container {
+  position: relative;
+  max-width: 500px;
+  height: auto;
+  margin: 10px auto;
+}
+
+.accordion-container h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.set {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+}
+
+.set a {
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  transition: all 0.2s linear;
+}
+
+.set a i {
+  float: right;
+  margin-top: 2px;
+}
+
+.set a.active {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.accor-content {
+  border-bottom: 1px solid #ddd;
+  display: none;
+}
+
+.accor-content p {
+  padding: 20px;
+}
